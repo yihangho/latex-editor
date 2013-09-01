@@ -6,6 +6,7 @@
 	<title>LaTeX Editor</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/tutorial.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.caret.js"></script>
 	<script type="text/x-mathjax-config">
@@ -183,8 +184,10 @@
 			</ul>
 		</div>
 
-		<div id="intro">
-			To start, click either Inline mode or Displayed mode, and enter math between the symbols inserted.
+		<div id="tutorial">
+			<button id="tutorial-start" class="btn btn-default">Start tutorial</button>
+			<p id="instruction" style="display:none;">\({}\)</p>
+			<button id="tutorial-next" class="btn btn-default" style="display:none;">Next</button>
 		</div>
 
 		<div>
