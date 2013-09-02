@@ -1,0 +1,517 @@
+[
+	{
+		"type":"button",
+		"label":"Inline mode",
+		"latex_code":"\\( \\)",
+		"caret_start_offset":"-2"
+	},
+	{
+		"type":"button",
+		"label":"Displayed mode",
+		"latex_code":"\\[ \\]",
+		"caret_start_offset":"-2"
+	},
+	{
+		"type":"category",
+		"label":"Common",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\frac{a}{b}\\) (Fraction)",
+				"latex_code":"\\frac{a}{b}",
+				"caret_start_offset":"-5",
+				"caret_end_offset":"-4"
+			},
+			{
+				"type":"button",
+				"label":"\\(a^b\\) (Exponentiation)",
+				"latex_code":"a^b",
+				"caret_start_offset":"-3",
+				"caret_end_offset":"-2"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\sqrt{b}\\) (Square root)",
+				"latex_code":"\\sqrt{b}",
+				"caret_start_offset":"-2",
+				"caret_end_offset":"-1"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\sqrt[n]{b}\\) (\\(n\\)-th root)",
+				"latex_code":"\\sqrt[n]{b}",
+				"caret_start_offset":"-5",
+				"caret_end_offset":"-4"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Operator",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(+\\) (Addition)",
+				"latex_code":"+"
+			},
+			{
+				"type":"button",
+				"label":"\\(-\\) (Subtraction)",
+				"latex_code":"-"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\cdot\\) (Dot product)",
+				"latex_code":"\\cdot"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\times\\) (Cross product)",
+				"latex_code":"\\times"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\div\\) (Division)",
+				"latex_code":"\\div"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Comparison",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(<\\) (Less than)",
+				"latex_code":"<"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\le\\) (Less than or equal)",
+				"latex_code":"\\le"
+			},
+			{
+				"type":"button",
+				"label":"\\(>\\) (Greater than)",
+				"latex_code":">"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\ge\\) (Greater than or equal)",
+				"latex_code":"\\ge"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\ll\\) (Much less than)",
+				"latex_code":"\\ll"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\gg\\) (Much greater than)",
+				"latex_code":"\\gg"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\ne\\) (Not equal)",
+				"latex_code":"\\ne"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Greek alphabets",
+		"members":[
+			{
+				"type":"label",
+				"label":"Small letter"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\alpha\\)",
+				"latex_code":"\\alpha"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\beta\\)",
+				"latex_code":"\\beta"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\gamma\\)",
+				"latex_code":"\\gamma"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\delta\\)",
+				"latex_code":"\\delta"
+			},
+			{
+				"type":"label",
+				"label":"Capital letter"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathrm{A}\\)",
+				"latex_code":"\\mathrm{A}"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathrm{B}\\)",
+				"latex_code":"\\mathrm{B}"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Gamma\\)",
+				"latex_code":"\\Gamma"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Delta\\)",
+				"latex_code":"\\Delta"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Calculus",
+		"members":[
+			{
+				"type":"label",
+				"label":"Differentiation"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\frac{d}{dx}\\left(f(x)\\right)\\)",
+				"latex_code":"\\frac{d}{dx}\\left(f(x)\\right)",
+				"caret_start_offset":"-11",
+				"caret_end_offset":"-7"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\frac{dy}{dx}\\)",
+				"latex_code":"\\frac{dy}{dx}"
+			},
+			{
+				"type":"button",
+				"label":"\\(f'(x)\\)",
+				"latex_code":"f'(x)",
+				"caret_start_offset":"-2",
+				"caret_end_offset":"-1"
+			},
+			{
+				"type":"button",
+				"label":"\\(f^{(n)}(x)\\)",
+				"latex_code":"f^{(n)}(x)",
+				"caret_start_offset":"-6",
+				"caret_end_offset":"-5"
+			},
+			{
+				"type":"label",
+				"label":"Integration"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\int f(x)\\, dx\\)",
+				"latex_code":"\\int f(x)\\, dx",
+				"caret_start_offset":"-9",
+				"caret_end_offset":"-5"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\int^{a}_{b} f(x)\\, dx\\)",
+				"latex_code":"\\int^{a}_{b} f(x)\\, dx",
+				"caret_start_offset":"-16",
+				"caret_end_offset":"-15"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Trigonometry",
+		"members":[
+			{
+				"type":"label",
+				"label":"Trigonometry"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\sin x\\)",
+				"latex_code":"\\sin x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\cos x\\)",
+				"latex_code":"\\cos x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\tan x\\)",
+				"latex_code":"\\tan x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\csc x\\)",
+				"latex_code":"\\csc x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\sec x\\)",
+				"latex_code":"\\sec x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\cot x\\)",
+				"latex_code":"\\cot x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"label",
+				"label":"Inverse"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\arcsin x\\)",
+				"latex_code":"\\arcsin x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\arccos x\\)",
+				"latex_code":"\\arccos x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\arctan x\\)",
+				"latex_code":"\\arctan x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Hyperbolic",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\sinh x\\)",
+				"latex_code":"\\sinh x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\cosh x\\)",
+				"latex_code":"\\cosh x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\tanh x\\)",
+				"latex_code":"\\tanh x",
+				"caret_start_offset":"-1",
+				"caret_end_offset":"0"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Geomtry",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\angle\\) (Angle)",
+				"latex_code":"\\angle"
+			},
+			{
+				"type":"button",
+				"label":"\\(^\\circ\\) (Degree)",
+				"latex_code":"^\\circ"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Vector",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\vec{AB}\\)",
+				"latex_code":"\\vec{AB}",
+				"caret_start_offset":"-3",
+				"caret_end_offset":"-1"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\hat{k}\\)",
+				"latex_code":"\\hat{k}",
+				"caret_start_offset":"-2",
+				"caret_end_offset":"-1"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Set",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\cup\\) (Union)",
+				"latex_code":"\\cup"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\cap\\) (Intersection)",
+				"latex_code":"\\cap"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\subset\\) (Subset)",
+				"latex_code":"\\subset"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\supset\\) (Superset)",
+				"latex_code":"\\supset"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\subsetneq\\) (Proper subset)",
+				"latex_code":"\\subsetneq"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\supsetneq\\) (Proper superset)",
+				"latex_code":"\\supsetneq"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\in\\) (element of)",
+				"latex_code":"\\in"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\{ \\}\\) (Curly braces)",
+				"latex_code":"\\{ \\}",
+				"caret_start_offset":"-2"
+			},
+			{
+				"type":"label",
+				"label":"Set of numbers",
+				"divider":"true"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathbb{N}\\) (Set of all natural numbers)",
+				"latex_code":"\\mathbb{N}"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathbb{Z}\\) (Set of all integers)",
+				"latex_code":"\\mathbb{Z}"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathbb{Q}\\) (Set of all rational numbers)",
+				"latex_code":"\\mathbb{Q}"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathbb{R}\\) (Set of all real numbers)",
+				"latex_code":"\\mathbb{R}"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathbb{C}\\) (Set of all complex numbers)",
+				"latex_code":"\\mathbb{C}"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Series",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\sum^{n}_{i=0}a_i\\) (Sigma notation)",
+				"latex_code":"\\sum^{n}_{i=0}a_i",
+				"caret_start_offset":"-11",
+				"caret_end_offset":"-10"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\prod^{n}_{i=0}a_i\\) (Pi notation)",
+				"latex_code":"\\prod^{n}_{i=0}a_i",
+				"caret_start_offset":"-11",
+				"caret_end_offset":"-10"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Combinatorics",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\dbinom{n}{k}\\) (Binomial)",
+				"latex_code":"\\dbinom{n}{k}",
+				"caret_start_offset":"-5",
+				"caret_end_offset":"-4"
+			},
+			{
+				"type":"button",
+				"label":"\\(^n C _r\\) (Combination)",
+				"latex_code":"^n C _r",
+				"caret_start_offset":"-6",
+				"caret_end_offset":"-5"
+			},
+			{
+				"type":"button",
+				"label":"\\(^n P _r\\) (Permutation)",
+				"latex_code":"^n P _r",
+				"caret_start_offset":"-6",
+				"caret_end_offset":"-5"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Other",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\cdots\\) (Ellipsis)",
+				"latex_code":"\\cdots"
+			},
+			{
+				"type":"button",
+				"label":"\\(a_b\\) (Subscript)",
+				"latex_code":"a_b",
+				"caret_start_offset":"-3",
+				"caret_end_offset":"-2"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mathfrak{F}\\) (Fraktur font)",
+				"latex_code":"\\mathfrak{F}",
+				"caret_start_offset":"-2",
+				"caret_end_offset":"-1"
+			}
+		]
+	}
+]
