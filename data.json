@@ -119,12 +119,8 @@
 	},
 	{
 		"type":"category",
-		"label":"Greek alphabets",
+		"label":"Greek alphabets I",
 		"members":[
-			{
-				"type":"label",
-				"label":"Small letter"
-			},
 			{
 				"type":"button",
 				"label":"\\(\\alpha\\)",
@@ -146,19 +142,127 @@
 				"latex_code":"\\delta"
 			},
 			{
-				"type":"label",
-				"label":"Capital letter"
+				"type":"button",
+				"label":"\\(\\epsilon\\)",
+				"latex_code":"\\epsilon"
 			},
 			{
 				"type":"button",
-				"label":"\\(\\mathrm{A}\\)",
-				"latex_code":"\\mathrm{A}"
+				"label":"\\(\\varepsilon\\)",
+				"latex_code":"\\varepsilon"
 			},
 			{
 				"type":"button",
-				"label":"\\(\\mathrm{B}\\)",
-				"latex_code":"\\mathrm{B}"
+				"label":"\\(\\zeta\\)",
+				"latex_code":"\\zeta"
 			},
+			{
+				"type":"button",
+				"label":"\\(\\eta\\)",
+				"latex_code":"\\eta"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\theta\\)",
+				"latex_code":"\\theta"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\iota\\)",
+				"latex_code":"\\iota"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\kappa\\)",
+				"latex_code":"\\kappa"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\lambda\\)",
+				"latex_code":"\\lambda"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\mu\\)",
+				"latex_code":"\\mu"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Greek alphabets II",
+		"members":[
+			{
+				"type":"button",
+				"label":"\\(\\nu\\)",
+				"latex_code":"\\nu"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\xi\\)",
+				"latex_code":"\\xi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\omicron\\)",
+				"latex_code":"\\omicron"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\pi\\)",
+				"latex_code":"\\pi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\rho\\)",
+				"latex_code":"\\rho"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\sigma\\)",
+				"latex_code":"\\sigma"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\varsigma\\)",
+				"latex_code":"\\varsigma"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\tau\\)",
+				"latex_code":"\\tau"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\upsilon\\)",
+				"latex_code":"\\upsilon"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\phi\\)",
+				"latex_code":"\\phi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\chi\\)",
+				"latex_code":"\\chi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\psi\\)",
+				"latex_code":"\\psi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\omega\\)",
+				"latex_code":"\\omega"
+			}
+		]
+	},
+	{
+		"type":"category",
+		"label":"Greek alphabets III",
+		"members":[
 			{
 				"type":"button",
 				"label":"\\(\\Gamma\\)",
@@ -168,6 +272,51 @@
 				"type":"button",
 				"label":"\\(\\Delta\\)",
 				"latex_code":"\\Delta"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Theta\\)",
+				"latex_code":"\\Theta"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Lambda\\)",
+				"latex_code":"\\Lambda"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Xi\\)",
+				"latex_code":"\\Xi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Pi\\)",
+				"latex_code":"\\Pi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Sigma\\)",
+				"latex_code":"\\Sigma"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Upsilon\\)",
+				"latex_code":"\\Upsilon"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Phi\\)",
+				"latex_code":"\\Phi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Psi\\)",
+				"latex_code":"\\Psi"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\Omega\\)",
+				"latex_code":"\\Omega"
 			}
 		]
 	},
