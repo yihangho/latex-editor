@@ -9,6 +9,8 @@ LaTeX Editor is powered by these awesome libraries: (arranged in alphabetical or
 - [jQuery.caret.js](https://github.com/garyharan/jQuery-caret-utilities)
 - [MathJax](http://www.mathjax.org/) (the renderer and the script for live preview)
 
+jQuery, jQuery.caret.js and MathJax are __required__.
+
 ## Documentation
 This documentation is over simplfied - current aim is to prevent me from forgetting stuff.
 
