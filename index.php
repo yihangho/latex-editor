@@ -16,15 +16,7 @@
 	<script src="js/mathjax-livepreview.js"></script>
 	<script>
 	$(document).ready(function(){
-		$(".insert-latex").click(function(){
-			if (!$(this).data("latex-code")) return;
-			$("textarea#input").insertAtCaret($(this).data("latex-code"));
-			if ($(this).data("caret-end-offset") !== undefined)
-				$("textarea#input").setCaretPosition($("textarea#input").getCaretPosition()+$(this).data("caret-start-offset"), $("textarea#input").getCaretPosition()+$(this).data("caret-end-offset"));
-			else if ($(this).data("caret-start-offset") !== undefined)
-				$("textarea#input").setCaretPosition($("textarea#input").getCaretPosition()+$(this).data("caret-start-offset"));
-			Preview.Update();
-		});
+		var previewer = Initialize($("textarea#input"), $("div#ScribblePreview"), $("div#ScribbleBuffer"), $(".insert-latex"));
 	});
 	</script>
 </head>
@@ -53,7 +45,7 @@
 		</div>
 
 		<div>
-			<textarea id="input" rows=15 onkeyup="Preview.Update()" style="font-family: 'Courier New', Courier, monospace; width:100%;"></textarea>
+			<textarea id="input" rows=15 style="font-family: 'Courier New', Courier, monospace; width:100%;"></textarea>
 		</div>
 		<div id="ScribblePreview"></div>
 		<div id="ScribbleBuffer"></div>
