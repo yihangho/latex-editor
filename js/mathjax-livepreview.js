@@ -49,6 +49,7 @@ var Previewer = function(_textarea, _preview, _buffer, _buttons)
 
 	this.buttons.data("this", this.cur_instance);
 	this.buttons.click(function(){
+		event.preventDefault();
 		var that = $(this).data("this");
 		if (!$(this).data("latex-code")) return;
 		that.textarea.insertAtCaret($(this).data("latex-code"));
