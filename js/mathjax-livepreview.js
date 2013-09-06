@@ -26,7 +26,7 @@ var Previewer = function(_textarea, _preview, _buffer, _buttons)
 	this.CreatePreview = function() {
 		this.timeout = null;
 		if (this.mjRunning) return;
-		var text = this.textarea.val();
+		var text = this.textarea.val().replace(/\n/g, "<br>");
 		if (text == this.oldtext) return;
 		this.buffer.html(this.oldtext = text);
 		this.mjRunning = true;
