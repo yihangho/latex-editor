@@ -82,7 +82,7 @@ var goto = function(step, force) {
 		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
 	}
 	if (step == 6) {
-		if ($("textarea#ScribbleInput").val() != "Let's try out the inline mode:\\( \\) Lorem ipsum dolor sit amet, consectetur adipiscing elit." && !force) {
+		if (!force && !/\\\(\s*\\\)/.test($("textarea#ScribbleInput").val())) {
 			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
 			$("div#tutorial-alert").fadeIn();
 			return;
@@ -100,7 +100,7 @@ var goto = function(step, force) {
 		$("div#tutorial div.panel-body").html("You should be able to see that '\\( \\)' appears right after the colon. This is the delimiter for inline mode - we will be entering all the math stuff in between this pair. Now, move the cursor to right before the second slash, click 'Common' in the selector and choose 'Square root'.<br>Click next when you are ready and, again, if you think you're stuck, click Reset.");
 	}
 	if (step == 7) {
-		if ($("textarea#ScribbleInput").val() != "Let's try out the inline mode:\\( \\sqrt{b}\\) Lorem ipsum dolor sit amet, consectetur adipiscing elit." && !force) {
+		if (!force && !/\\\(\s*\\sqrt\{\s*b\s*\}\s*\\\)/.test($("textarea#ScribbleInput").val())) {
 			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
 			$("div#tutorial-alert").fadeIn();
 			return;
@@ -126,7 +126,7 @@ var goto = function(step, force) {
 		$("div#tutorial div.panel-body").html("This time, we are going to see what displayed mode is. Just like last time, move the cursor in the textarea below to right after the colon. This time, choose Displayed mode from the selector.");
 	}
 	if (step == 9) {
-		if ($("textarea#ScribbleInput").val() != "Let's try out the displayed mode this time:\\[ \\] Curabitur sodales, lectus eget auctor egestas, diam odio egestas sem, a tincidunt nibh tellus ut risus." && !force) {
+		if (!force && !/\\\[\s*\\\]/.test($("textarea#ScribbleInput").val())) {
 			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
 			$("div#tutorial-alert").fadeIn();
 			return;
@@ -142,7 +142,7 @@ var goto = function(step, force) {
 		$("div#tutorial div.panel-body").html("Great work! Now, move the cursor to right before the second slash. Click Series from the selector and then choose Sigma notation.<br>When you're done, click Next. If you messed things up, click Reset.");
 	}
 	if (step == 10) {
-		if ($("textarea#ScribbleInput").val() != "Let's try out the displayed mode this time:\\[ \\sum^{n}_{i=0}a_i\\] Curabitur sodales, lectus eget auctor egestas, diam odio egestas sem, a tincidunt nibh tellus ut risus." && !force) {
+		if (!force && !/\\\[\s*\\sum\s*\^\s*\{\s*n\s*\}\s*_\s*\{\s*i\s*\=\s*0\s*\}\s*a\s*_\s*i\s*\\\]/.test($("textarea#ScribbleInput").val())) {
 			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
 			$("div#tutorial-alert").fadeIn();
 			return;
