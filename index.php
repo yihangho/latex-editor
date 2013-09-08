@@ -25,19 +25,17 @@
 	<div class="container">
 		<div class="alert alert-warning alert-dismissable" style="display:none;" id="tutorial-alert">
 			<button type="button" class="close" aria-hidden="true" onclick="$('div#tutorial-alert').fadeOut();">&times;</button>
-			<strong>Hmm...</strong> <span id="alert-message"></span>
+			<strong>Hmm...</strong> Seems like you are not doing it right. Why not give it a try again?
 		</div>
 		
 		<div id="tutorial-container">
 			<button id="tutorial-start" class="btn btn-default">Start tutorial</button>
 			<div class="panel panel-default" id="tutorial" style="display:none;">
-				<div class="panel-body" id="instruction">
-			    	Welcome to the \(\LaTeX\) tutorial brought to you by Scribble! Before we get started, it is good that we get familiar with the user interface here. Click Next to continue.
-				</div>
+				<div class="panel-body" id="instruction"></div>
 				<div class="panel-footer" style="overflow:hidden;">
 					<div class="btn-group pull-right">
 						<button type="button" class="btn btn-default tutorial-change-step" id="prev" disabled data-force="true">Prev</button>
-						<button type="button" class="btn btn-default" id="reset" disabled>Reset</button>
+						<button type="button" class="btn btn-default tutorial-change-step" id="reset" disabled data-force="true">Reset</button>
 						<button type="button" class="btn btn-default tutorial-change-step" id="next" data-goto=2>Next</button>
 					</div>
 				</div>

@@ -1,176 +1,134 @@
-var prev_element = false;
-var animate = function(element) {
-	if (prev_element && prev_element.hasClass('animated tada')) prev_element.removeClass('animated tada');
-	element.addClass('animated tada');
-	prev_element = element;
-}
-var kill_animate = function() {
-	if (prev_element) prev_element.removeClass('animated tada');
-	prev_element = false;
-}
-var update_step = function(cur_step) {
-	if (cur_step != 1) {
-		$("button#prev").data("goto", cur_step-1);
-		$("button#prev").removeAttr("disabled");
-	} else {
-		$("button#prev").attr("disabled", "disabled");
-	}
-	
-	$("button#next").data("goto", cur_step+1);
-
-	if (cur_step < 10) $("button#next").removeAttr("disabled");
-	else $("button#next").attr("disabled", "disabled");
-}
-var hide_all = function() {
-	$("div#tutorial-alert").hide();
-	$("textarea#ScribbleInput").hide();
-	$("div#ScribblePreview").hide();
-	$("div#ScribbleBuffer").hide();
-	$("div#latex-selector").hide();
-	$("button#reset").attr("disabled", "disabled");
-}
-
-var goto = function(step, force) {
-	if (!step) return;
-	if (step < 1 || step > 10) {
-		return;
-	}
-	
-	if (step == 1) {
-		hide_all();
-		kill_animate();
-		$("div#tutorial div.panel-body").html("Welcome to the \\(\\LaTeX\\) tutorial brought to you by Scribble! Before we get started, it is good that we get familiar with the user interface here. Click Next to continue.");
-		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
-	}
-	if (step == 2) {
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		animate($("textarea#ScribbleInput"));
-		$("div#tutorial div.panel-body").html("What is shown to you right now is the <strong>textarea</strong>. It is there for you to write stuff down.");
-	}
-	if (step == 3) {
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Hello World!");$("textarea#ScribbleInput").keyup();}, 200);
-		$("div#tutorial div.panel-body").html("The grey box that appears above the textarea is the <strong>live preview box</strong>. Everything that you have written in the textarea will be shown there. Try it out!");
-	}
-	if (step == 4) {
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Hello World!");$("textarea#ScribbleInput").keyup();}, 200);
-		$("div#tutorial div.panel-body").html("The grey box that is sandwiched between the live preview box and textarea is the \\(\\LaTeX\\) <strong>selector</strong>. Basically, this selector allows you to use \\(\\LaTeX\\) without knowing its markup language.");
-		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
-	}
-	if (step == 5) {
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the inline mode: Lorem ipsum dolor sit amet, consectetur adipiscing elit.");$("textarea#ScribbleInput").keyup();$("button#reset").data("default-text", $("textarea#ScribbleInput").val());}, 200);
-		$("button#reset").removeAttr("disabled");
-		$("div#tutorial div.panel-body").html("In \\(\\LaTeX\\), there are two modes to enter math: inline mode and displayed mode. We shall see what inline mode is first. In the textarea below, move the cursor to right after the colon, and choose 'Inline mode' from the selector.<br>When you are ready, click Next. If you think you screwed something up, just click Reset.");
-		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
-	}
-	if (step == 6) {
-		if (!force && !/\\\(\s*\\\)/.test($("textarea#ScribbleInput").val())) {
-			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
-			$("div#tutorial-alert").fadeIn();
-			return;
-		}
-		hide_all();
-		kill_animate();
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the inline mode:\\( \\) Lorem ipsum dolor sit amet, consectetur adipiscing elit.");$("textarea#ScribbleInput").keyup();$("button#reset").data("default-text", $("textarea#ScribbleInput").val());}, 200);
-		$("button#reset").removeAttr("disabled");
-		$("div#tutorial div.panel-body").html("You should be able to see that '\\( \\)' appears right after the colon. This is the delimiter for inline mode - we will be entering all the math stuff in between this pair. Now, move the cursor to right before the second slash, click 'Common' in the selector and choose 'Square root'.<br>Click next when you are ready and, again, if you think you're stuck, click Reset.");
-	}
-	if (step == 7) {
-		if (!force && !/\\\(\s*\\sqrt\{\s*b\s*\}\s*\\\)/.test($("textarea#ScribbleInput").val())) {
-			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
-			$("div#tutorial-alert").fadeIn();
-			return;
-		}
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the inline mode:\\( \\sqrt{b}\\) Lorem ipsum dolor sit amet, consectetur adipiscing elit.");$("textarea#ScribbleInput").keyup();}, 200);
-		$("div#tutorial div.panel-body").html("That's right. You should now be able to see a beautifully rendered square root sign in the live preview box. From what we can see now, the math symbol appears in between other text outside the delimiter - it can be said that the math symbol is shown <em>inline</em> with other text, hence, it is called inline mode. Before we move on, please feel free to experiment with other symbols. Also, try to change the \\(b\\) in the square root to something else.<br>When you are ready, click Next.");
-		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
-	}
-	if (step == 8) {
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the displayed mode this time: Curabitur sodales, lectus eget auctor egestas, diam odio egestas sem, a tincidunt nibh tellus ut risus.");$("textarea#ScribbleInput").keyup();$("button#reset").data("default-text", $("textarea#ScribbleInput").val());}, 200);
-		$("button#reset").removeAttr("disabled");
-		$("div#tutorial div.panel-body").html("This time, we are going to see what displayed mode is. Just like last time, move the cursor in the textarea below to right after the colon. This time, choose Displayed mode from the selector.");
-	}
-	if (step == 9) {
-		if (!force && !/\\\[\s*\\\]/.test($("textarea#ScribbleInput").val())) {
-			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
-			$("div#tutorial-alert").fadeIn();
-			return;
-		}
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the displayed mode this time:\\[ \\] Curabitur sodales, lectus eget auctor egestas, diam odio egestas sem, a tincidunt nibh tellus ut risus.");$("textarea#ScribbleInput").keyup();$("button#reset").data("default-text", $("textarea#ScribbleInput").val());}, 200);
-		$("button#reset").removeAttr("disabled");
-		$("div#tutorial div.panel-body").html("Great work! Now, move the cursor to right before the second slash. Click Series from the selector and then choose Sigma notation.<br>When you're done, click Next. If you messed things up, click Reset.");
-	}
-	if (step == 10) {
-		if (!force && !/\\\[\s*\\sum\s*\^\s*\{\s*n\s*\}\s*_\s*\{\s*i\s*\=\s*0\s*\}\s*a\s*_\s*i\s*\\\]/.test($("textarea#ScribbleInput").val())) {
-			$("span#alert-message").html("Seems like you are not doing it right. Why not give it a try again?");
-			$("div#tutorial-alert").fadeIn();
-			return;
-		}
-		hide_all();
-		kill_animate();
-		$("textarea#ScribbleInput").show();
-		$("div#latex-selector").show();
-		$("textarea#ScribbleInput").val("");
-		$("textarea#ScribbleInput").keyup();
-		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the displayed mode this time:\\[ \\sum^{n}_{i=0}a_i\\] Curabitur sodales, lectus eget auctor egestas, diam odio egestas sem, a tincidunt nibh tellus ut risus.");$("textarea#ScribbleInput").keyup();$("button#reset").data("default-text", $("textarea#ScribbleInput").val());}, 200);
-		$("div#tutorial div.panel-body").html("Nice. As you can see, although the syntax for sigma notation appears in between other text, it is shown on its own line and is centered. This is how displayed mode shows math formula. Also take note that the delimiter for displayed mode is \\[ \\] while the delimiter for inline mode is \\( \\).<br>You have now reached the end of the tutorial. The operating model of Scribble is almost the same as what you have seen here, except you can specify a (optional) title and have to save when you're ready. Feel free to experiment with other symbols using inline mode or displayed mode before you go. Have fun!");
-	}
-	update_step(step);
-}
-
 $(document).ready(function(){
+	// "Global variable"
+	var animation_prev_element = false;
+	var tutorial_content;
+	// DOMs
+	var textarea = $("textarea#ScribbleInput");
+	var preview = $("div#ScribblePreview");
+	var buffer = $("div#ScribbleBuffer");
+	var selector = $("div#latex-selector");
+	var prev_button = $("button#prev");
+	var next_button = $("button#next");
+	var reset_button = $("button#reset");
+	var alert_bar = $("div#tutorial-alert");
+	var instruction = $("div#instruction");
+
+	// Function definition
+	function load_tutorial() {
+		$.getJSON("js/tutorial.json", function(data){
+			tutorial_content = data;
+		});
+	}
+	function animate(element) {
+		kill_animation();
+		element.addClass('animated tada');
+		animation_prev_element = element;
+	}
+
+	function kill_animation() {
+		if (animation_prev_element) {
+			animation_prev_element.removeClass('animated tada');
+			animation_prev_element = false;
+		}
+	}
+
+	function update_step_attr(cur_step) {
+		// Update the data-goto attribute for the buttons
+		prev_button.data("goto", cur_step-1);
+		next_button.data("goto", cur_step+1);
+		reset_button.data("goto", cur_step);
+
+		if (cur_step > 1) {
+			prev_button.removeAttr("disabled");
+		} else {
+			prev_button.attr("disabled", "");
+		}
+
+		if (cur_step < tutorial_content.length) {
+			next_button.removeAttr("disabled");
+		} else {
+			next_button.attr("disabled", "");
+		}
+
+		if ("reset" in tutorial_content[cur_step-1] && tutorial_content[cur_step-1]["reset"]) {
+			reset_button.removeAttr("disabled");
+		} else {
+			reset_button.attr("disabled", "");
+		}
+	}
+
+	function hide_all() {
+		textarea.hide();
+		selector.hide();
+		preview.hide();
+		buffer.hide();
+		alert_bar.hide();
+		kill_animation();
+	}
+
+	function goto(step, force) {
+		if (!tutorial_content) {
+			load_tutorial();
+			return;
+		}
+
+		if (step <= 0 || step > tutorial_content.length) {
+			return;
+		}
+
+		var cur_step = tutorial_content[step-1];
+
+		if (!force && "regex" in cur_step && !(new RegExp(cur_step["regex"]).test(textarea.val()))) {
+			alert_bar.fadeIn();
+			return;
+		}
+
+		hide_all();
+
+		if ("textarea" in cur_step && cur_step["textarea"] == "show") {
+			textarea.show();
+		}
+
+		if ("selector" in cur_step && cur_step["selector"] == "show") {
+			selector.show();
+		}
+
+		if ("animate" in cur_step) {
+			if (cur_step["animate"] == "textarea") {
+				animate(textarea);
+			}
+			// TODO: Handle other objects
+		}
+
+		if ("textarea-text" in cur_step) {
+			textarea.val("");
+			textarea.keyup();
+			setTimeout(function(){
+				textarea.val(cur_step["textarea-text"]);
+				textarea.keyup();
+			}, 200);
+		}
+
+		instruction.html(cur_step["instruction"]);
+
+		if ("render" in cur_step && cur_step["render"]) {
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
+		}
+
+		update_step_attr(step);
+	}
+
+	// Event listeners
 	$("button.tutorial-change-step").click(function(){
 		goto($(this).data("goto"), $(this).data("force"));
 	});
-	$("button#reset").click(function(){
-		$("textarea#ScribbleInput").val($(this).data("default-text"));
-		$("textarea#ScribbleInput").keyup();
-	});
+
 	$("button#tutorial-start").click(function(){
-		$(this).hide();
+		$("button#tutorial-start").hide();
 		$("div#tutorial").show();
 		goto(1);
 	});
+
+	// Load tutorial
+	load_tutorial();
 });
