@@ -113,6 +113,7 @@ var goto = function(step, force) {
 		$("textarea#ScribbleInput").keyup();
 		setTimeout(function(){$("textarea#ScribbleInput").val("Let's try out the inline mode:\\( \\sqrt{b}\\) Lorem ipsum dolor sit amet, consectetur adipiscing elit.");$("textarea#ScribbleInput").keyup();}, 200);
 		$("div#tutorial div.panel-body").html("That's right. You should now be able to see a beautifully rendered square root sign in the live preview box. From what we can see now, the math symbol appears in between other text outside the delimiter - it can be said that the math symbol is shown <em>inline</em> with other text, hence, it is called inline mode. Before we move on, please feel free to experiment with other symbols. Also, try to change the \\(b\\) in the square root to something else.<br>When you are ready, click Next.");
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"instruction"]);
 	}
 	if (step == 8) {
 		hide_all();
