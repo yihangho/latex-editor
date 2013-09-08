@@ -42,6 +42,11 @@
 				"latex_code":"\\sqrt[n]{b}",
 				"caret_start_offset":"-5",
 				"caret_end_offset":"-4"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\pm\\) (Plus or minus)",
+				"latex_code":"\\pm"
 			}
 		]
 	},
@@ -114,6 +119,16 @@
 				"type":"button",
 				"label":"\\(\\ne\\) (Not equal)",
 				"latex_code":"\\ne"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\approx\\) (Approximately equal)",
+				"latex_code":"\\approx"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\equiv\\) (Equivalent or congruent)",
+				"latex_code":"\\equiv"
 			}
 		]
 	},
@@ -480,7 +495,7 @@
 	},
 	{
 		"type":"category",
-		"label":"Geomtry",
+		"label":"Geometry",
 		"members":[
 			{
 				"type":"button",
@@ -491,6 +506,16 @@
 				"type":"button",
 				"label":"\\(^\\circ\\) (Degree)",
 				"latex_code":"^\\circ"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\parallel\\) (Parallel)",
+				"latex_code":"\\parallel"
+			},
+			{
+				"type":"button",
+				"label":"\\(\\perp\\) (Perpendicular)",
+				"latex_code":"\\perp"
 			}
 		]
 	},
